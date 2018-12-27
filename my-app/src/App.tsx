@@ -7,14 +7,22 @@ import logo from './logo.svg';
 class App extends React.Component {
 
     public state = {
-        text: 'something'
+        text: ''
+    }
+
+    constructor(props: any) {
+        super(props);
+        this.state = { text: 'something' };
     }
 
     public handleClick = () => {
+        const date = `new ! : ${new Date().toString()}`;
+
         // tslint:disable-next-line:no-console
-        console.log('click !');
+        console.log('click ! : ' + date);
+
         this.setState({
-            text: `new ! : ${Date.now()}`
+            text: date
         });
     };
 

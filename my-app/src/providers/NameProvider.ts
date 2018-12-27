@@ -5,6 +5,6 @@ import { IProvider } from './IProvider';
 export class NameProvider implements IProvider<string> {
     public provide(): string {
         const rnd: number = Math.random();
-        return rnd > 0.5 ? "-Earth" : "-Mars";
+        return rnd > 0.5 ? "-Earth-" : "-Mars-";
     }
 }
